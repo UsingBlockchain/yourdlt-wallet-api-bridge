@@ -25,9 +25,10 @@ export interface AppRoute extends RouteRecordPublic {
   meta: RouteMeta;
   path: string;
   children?: AppRoute[];
-  components: Dictionary<Component>;
-  instances: Dictionary<Vue>;
-  props:
+  component?: Component;
+  components?: Dictionary<Component>;
+  instances?: Dictionary<Vue>;
+  props?:
     | boolean
     | Record<string, any>
     | Dictionary<boolean | Record<string, any>>;
